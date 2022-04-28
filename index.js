@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-	res.cookie("myCooie", "myValue", { secure: true });
+	res.cookie("myCookie", "myValue", { secure: true });
 	res.cookie("cookie#2", "cookieValue#2", { maxAge: 10000 });
 	res.end("hello world");
 	console.log(res.getHeaders());
