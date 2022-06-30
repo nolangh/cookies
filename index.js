@@ -10,11 +10,12 @@ app.use(
 		secret: "test string that remains secret",
 		resave: false,
 		saveUninitialized: false,
-		cookie: { maxAge: 100000 },
+		cookie: { maxAge: 100000 }, // NOTE: time is in miliseconds
 	})
 );
 
 //ANCHOR this is middleware that calls next
+
 app.use((req, res, next) => {
 	next();
 });
