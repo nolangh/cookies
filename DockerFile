@@ -1,5 +1,19 @@
+# A VERY simple node project that tracks how many times a website was viewed using cookies
+# Cohort 14
+
 FROM node:16.3.0
 
 LABEL maintainer="Nolan Higgins"
 
-WORKDIR .
+WORKDIR /Users/nolanhiggins/cookies
+
+COPY . /Users/nolanhiggins/cookies
+
+# App port/Docker port
+EXPOSE 8080
+
+RUN npm install
+
+RUN apt-get --yes update && apt-get --yes install 
+
+CMD [ "npm", "start" ]
